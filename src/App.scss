@@ -4,7 +4,7 @@
   transition: all .2s;
 
   &.active {
-    background-color: rgb(var(--pomodoro-dark));
+    background-color: var(--pomodoro-dark-hex);
   }
 }
 
@@ -18,9 +18,20 @@
   padding: 2rem;
 }
 
+.pomodoro-form {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
 .pomodoro-timer {
   align-items: center;
-  background-color: rgba(var(--pomodoro-dark), .7);
+  background-color: rgba(var(--pomodoro-dark-rgb), .7);
   border-radius: 1.8rem;
   display: flex;
   justify-content: center;
@@ -53,7 +64,7 @@
 .pomodoro-text {
   color: var(--white);
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   letter-spacing: .1rem;
 }
 

@@ -20,6 +20,8 @@
 
   &:active {
     color: var(--black);
+    box-shadow: 0 .4rem 0 var(--grey-light-2);
+    transform: translateY(.6rem);
   }
 
   @media only screen and (max-width: 768px) {
@@ -27,11 +29,15 @@
     min-width: 16rem;
   }
 
-  .text {
-    margin-right: 1rem;
+  &.hasIcon {
+    .label {
+      margin-right: 1rem;
+    }
   }
 
   // &.start {}
+
+  // &.apply {}
 
   &.stop {
     box-shadow: 0 .4rem 0 var(--grey-light-2);
@@ -40,13 +46,18 @@
 
   &.reset {
 
-    &:active {
-      box-shadow: 0 .4rem 0 var(--grey-light-2);
-      transform: translateY(.6rem);
-    }
-
     @media only screen and (max-width: 768px) {
       margin: 0;
+    }
+  }
+
+  &.secondary {
+    background-color: var(--pomodoro);
+    color: var(--white);
+    box-shadow: 0 1rem 0 var(--pomodoro-dark-hex);
+
+    &:active {
+      box-shadow: 0 .4rem 0 var(--pomodoro-dark-hex);
     }
   }
 }

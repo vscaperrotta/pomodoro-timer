@@ -7,6 +7,7 @@ const Anchor = (props) => (
     href={props.href}
     target='_blank'
     rel="noreferrer"
+    onClick={props.onClick}
   >
     {props.label}
   </a>

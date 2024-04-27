@@ -1,9 +1,11 @@
 .pomodoro-link {
   color: var(--white);
   font-weight: 700;
+  font-size: 1.8rem;
   text-decoration: none;
 
   &:hover {
+    cursor: pointer;
     text-decoration: underline;
   }
 }
