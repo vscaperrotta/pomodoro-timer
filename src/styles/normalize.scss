@@ -20,4 +20,13 @@ html {
 
 body {
   font-family: 'Quicksand', sans-serif;
+  position: relative;
+
+  input {
+    font-family: 'Quicksand', sans-serif;
+  }
+}
+
+#root {
+  position: relative;
 }

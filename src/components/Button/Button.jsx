@@ -4,13 +4,17 @@ import './Button.scss';
 
 const Button = (props) => (
   <button
-    className={`pomodoro-button ${props.className}`}
+    className={`pomodoro-button ${props.icon && 'hasIcon'} ${props.secondary && 'secondary'} ${props.className}`}
     onClick={props.onClick}
   >
-    <span className='text'>
-      {props.label}
-    </span>
-    <FontAwesomeIcon icon={props.icon} />
+    {props.label ? (
+      <span className='label'>
+        {props.label}
+      </span>
+    ) : null}
+    {props.icon ? (
+      <FontAwesomeIcon icon={props.icon} />
+    ) : null}
   </button>
 );
 
